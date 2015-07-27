@@ -9,3 +9,5 @@ Some of the planned features include:
 - Support for multiple homes with increasing permissions.
 - /mark and /return as a simple temporary sethome location; stored in cache
 - your suggestions?
+
+ * bungeecord support will be added in a future release.
