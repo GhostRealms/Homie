@@ -1,0 +1,10 @@
+name: Homie
+description: Home plugin for the GhostRealms network
+version: 0.1
+author: cliff
+main: net.ghostrealms.homie.Homie
+commands:
+    sethome:
+    home:
+    setwork:
+    work:
