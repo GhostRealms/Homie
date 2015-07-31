@@ -13,11 +13,11 @@ public class Homie extends JavaPlugin
 {
 	public static Homie instance;
 	
-	public static Jedis redis;
+	public Jedis redis;
 	
 	@Override
 	public void onEnable()
-	{
+	{		
 		instance = this;
 		this.getLogger().info("Enabled");
 		
@@ -26,7 +26,16 @@ public class Homie extends JavaPlugin
 	
 		this.getCommand("setwork").setExecutor(new SetWorkExecutor());
 		this.getCommand("work").setExecutor(new WorkExecutor());
-	
+	/*
+		try {
+			Class.forName("redis.clients.jedis.Jedis").newInstance();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}*/
 		redis = new Jedis("localhost");
 	}
 	

@@ -5,6 +5,14 @@ author: cliff
 main: net.ghostrealms.homie.Homie
 commands:
     sethome:
+        description: Sets the user's home to their location
+        usage: /sethome
     home:
+        description: Teleports the user to their home
+        usage: /home
     setwork:
+        description: Sets the user's workplace to their location
+        usage: /setwork
     work:
+        description: Teleports the user to their workplace
+        usage: /work
