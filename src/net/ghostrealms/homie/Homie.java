@@ -1,6 +1,8 @@
 package net.ghostrealms.homie;
 
 import net.ghostrealms.homie.commands.HomeExecutor;
+import net.ghostrealms.homie.commands.MarkExecutor;
+import net.ghostrealms.homie.commands.ReturnExecutor;
 import net.ghostrealms.homie.commands.SetHomeExecutor;
 import net.ghostrealms.homie.commands.SetWorkExecutor;
 import net.ghostrealms.homie.commands.WorkExecutor;
@@ -26,16 +28,10 @@ public class Homie extends JavaPlugin
 	
 		this.getCommand("setwork").setExecutor(new SetWorkExecutor());
 		this.getCommand("work").setExecutor(new WorkExecutor());
-	/*
-		try {
-			Class.forName("redis.clients.jedis.Jedis").newInstance();
-		} catch (InstantiationException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}*/
+		
+		this.getCommand("mark").setExecutor(new MarkExecutor());
+		this.getCommand("return").setExecutor(new ReturnExecutor());
+	
 		redis = new Jedis("localhost");
 	}
 	

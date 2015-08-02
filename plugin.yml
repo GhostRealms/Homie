@@ -16,3 +16,9 @@ commands:
     work:
         description: Teleports the user to their workplace
         usage: /work
+    mark:
+        description: Sets the user's temporary location
+        usage: /mark
+    return:
+        description: Teleports the user to their temporary location
+        usage: /return
