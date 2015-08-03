@@ -5,6 +5,7 @@ import java.util.Map;
 
 import net.ghostrealms.homie.Homie;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -29,7 +30,7 @@ public class SetHomeExecutor implements CommandExecutor {
 		String key = "Homie:home:" + player.getUniqueId().toString();
 		Homie.instance.redis.hmset(key, data);
 		
-		player.sendMessage("Your home has been set! You can use /home to come back.");
+		player.sendMessage(ChatColor.AQUA + "Your home has been set! You can use /home to come back.");
 		return true;
 	}
 

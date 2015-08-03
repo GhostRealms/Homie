@@ -5,6 +5,7 @@ import java.util.Map;
 
 import net.ghostrealms.homie.Homie;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -29,7 +30,7 @@ public class MarkExecutor implements CommandExecutor {
 		String key = "Homie:temp:" + player.getUniqueId().toString();
 		Homie.instance.redis.hmset(key, data);
 		
-		player.sendMessage("Your temporary location has been set! You can use /return to come back.");
+		player.sendMessage(ChatColor.AQUA + "Your temporary location has been set! You can use /return to come back.");
 		return true;
 	}
 

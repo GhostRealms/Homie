@@ -1,6 +1,6 @@
 name: Homie
 description: Home plugin for the GhostRealms network
-version: 0.1
+version: 1.0.0
 author: cliff
 main: net.ghostrealms.homie.Homie
 commands:

@@ -2,6 +2,7 @@ package net.ghostrealms.homie.commands;
 
 import java.util.Map;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -20,7 +21,7 @@ public class HomeExecutor implements CommandExecutor {
 		
 		if(data.size() == 0)
 		{
-			player.sendMessage("You have not set your home yet. You may set it with /sethome");
+			player.sendMessage(ChatColor.RED + "You have not set your home yet. You may set it with /sethome");
 			return true;
 		}
 		
@@ -32,7 +33,7 @@ public class HomeExecutor implements CommandExecutor {
 				Float.parseFloat(data.get("pitch")));
 		
 		player.teleport(home);
-		player.sendMessage("Welcome home!");
+		player.sendMessage(ChatColor.GREEN + "Welcome home!");
 		return true;
 	}
 

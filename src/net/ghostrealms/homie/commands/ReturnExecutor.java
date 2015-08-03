@@ -4,6 +4,7 @@ import java.util.Map;
 
 import net.ghostrealms.homie.Homie;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -20,7 +21,7 @@ public class ReturnExecutor implements CommandExecutor {
 		
 		if(data.size() == 0)
 		{
-			player.sendMessage("You have not set your temporary location yet. You may set it with /mark");
+			player.sendMessage(ChatColor.RED + "You have not set your temporary location yet. You may set it with /mark");
 			return true;
 		}
 		
@@ -32,7 +33,7 @@ public class ReturnExecutor implements CommandExecutor {
 				Float.parseFloat(data.get("pitch")));
 		
 		player.teleport(temp);
-		player.sendMessage("Returned to your temporary location!");
+		player.sendMessage(ChatColor.GREEN + "Returned to your temporary location!");
 		return true;
 	}
 

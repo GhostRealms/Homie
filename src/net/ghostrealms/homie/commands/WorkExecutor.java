@@ -7,6 +7,7 @@ import java.util.Map;
 
 import net.ghostrealms.homie.Homie;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -23,7 +24,7 @@ public class WorkExecutor implements CommandExecutor {
 
 		if(data.size() == 0)
 		{
-			player.sendMessage("You have not set your work yet. You may set it with /setwork");
+			player.sendMessage(ChatColor.RED + "You have not set your work yet. You may set it with /setwork");
 			return true;
 		}
 
@@ -35,7 +36,7 @@ public class WorkExecutor implements CommandExecutor {
 				Float.parseFloat(data.get("pitch")));
 
 		player.teleport(work);
-		player.sendMessage("Welcome to work!");
+		player.sendMessage(ChatColor.GREEN + "Welcome to work!");
 		return true;
 	}
 
