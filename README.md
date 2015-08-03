@@ -1,13 +1,14 @@
 # Homie
-Spigot 1.8 Home/Sethome Plugin with some additional neat features
+Spigot 1.8 Home plugin with some additional neat features
 
 This plugin is developed for the [Ghost Realms Network](http://ghostrealms.net); and released under the Apache 2 License.
 
-Some of the planned features include:
+#Features
+- Set locations with /sethome, /setwork, and /mark
+- Return with /home, /work, and /return
+- Data stored in Redis database, based on UUIDs
 
-- Database (or redis) based /home and /work location setter; with Cross-Server bungeecord support*
-- Support for multiple homes with increasing permissions.
-- /mark and /return as a simple temporary sethome location; stored in cache
-- your suggestions?
-
-` * bungeecord support will be added in a future release. `
+#Future additions
+- Permissions support
+- Cross-server support
+- Multiple homes with increasing permissions
