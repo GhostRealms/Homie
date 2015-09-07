@@ -36,8 +36,8 @@ permissions:
         description: Sets the users home to their current location
         default: op
     homie.setwork:
-            description: Sets the users work to their current location
-            default: op
+        description: Sets the users work to their current location
+        default: op
     homie.mark:
-            description: Sets the users temporary location to their current location
-            default: op
+        description: Sets the users temporary location to their current location
+        default: op
