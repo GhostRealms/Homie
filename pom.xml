@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.ghostrealms</groupId>
 	<artifactId>Homie</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<!-- <repository> <id>spigot-repo</id> <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url> 
 		</repository> -->
 	<build>
