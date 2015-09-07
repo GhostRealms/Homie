@@ -1,9 +1,7 @@
 package net.ghostrealms.homie.commands;
 
-import java.util.Map;
-
 import net.ghostrealms.homie.Homie;
-
+import net.ghostrealms.lib.GhostMessage;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -11,10 +9,20 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.Map;
+
 public class ReturnExecutor implements CommandExecutor {
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player player = (Player) sender;
+
+
+		if(!player.hasPermission("homie.return"))
+		{
+			GhostMessage.messagePlayer(player, "&cSorry, you don't have permission", true);
+			return true;
+		}
+
 		String key = "Homie:temp:" + player.getUniqueId().toString();
 		
 		Map<String, String> data = Homie.instance.redis.hgetAll(key);

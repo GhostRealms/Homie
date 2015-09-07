@@ -22,3 +22,22 @@ commands:
     return:
         description: Teleports the user to their temporary location
         usage: /return
+permissions:
+    homie.home:
+        description: Teleports the user home
+        default: op
+    homie.work:
+        description: Teleports the user to work
+        default: op
+    homie.return:
+        description: Teleports the user to their temporary location
+        default: op
+    homie.sethome:
+        description: Sets the users home to their current location
+        default: op
+    homie.setwork:
+            description: Sets the users work to their current location
+            default: op
+    homie.mark:
+            description: Sets the users temporary location to their current location
+            default: op

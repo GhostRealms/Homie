@@ -1,7 +1,7 @@
 package net.ghostrealms.homie.commands;
 
-import java.util.Map;
-
+import net.ghostrealms.homie.Homie;
+import net.ghostrealms.lib.GhostMessage;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -9,12 +9,20 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import net.ghostrealms.homie.Homie;
+import java.util.Map;
 
 public class HomeExecutor implements CommandExecutor {
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		Player player = (Player) sender;
+
+
+		if(!player.hasPermission("homie.home"))
+		{
+			GhostMessage.messagePlayer(player, "&cSorry, you don't have permission", true);
+			return true;
+		}
+
 		String key = "Homie:home:" + player.getUniqueId().toString();
 		
 		Map<String, String> data = Homie.instance.redis.hgetAll(key);
